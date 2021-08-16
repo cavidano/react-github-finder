@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Navbar = (props) => {
+const Navbar = ({icon, title}) => {
 
     return (
         <nav className="navbar bg-primary">
             <h1>
-                <i className={props.icon}></i>
-                <span style={{marginLeft: '0.5em'}}>{props.title}</span> 
+                <i className={icon}></i>
+                <span style={{marginLeft: '0.5em'}}>{title}</span> 
             </h1>
         </nav>
     )

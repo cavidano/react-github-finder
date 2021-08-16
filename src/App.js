@@ -3,12 +3,17 @@ import React, { Component } from 'react';
 // Components
 
 import Navbar from './components/layout/Navbar';
-import UserItem from './components/users/UserItem';
 import Users from './components/users/Users';
 
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+    console.log('cool!!!!!!');
+
+    
+  }
 
   render() {
     return (

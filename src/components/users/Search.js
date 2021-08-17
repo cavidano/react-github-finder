@@ -24,7 +24,7 @@ const Search = ({ searchUsers, showClear, clearUsers, setAlert }) => {
 
     return (
         <Fragment>
-
+        
             <form className="form" onSubmit={onSubmit}>
                 <input
                     type="text"
@@ -46,6 +46,7 @@ const Search = ({ searchUsers, showClear, clearUsers, setAlert }) => {
                 onClick={clearUsers}>
                     Clear
             </button>)}
+
         </Fragment>
     )
 }

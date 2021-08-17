@@ -14,6 +14,8 @@ import Search from './components/users/Search';
 import Alert from './components/layout/Alert';
 import { About } from './components/pages/About';
 
+// Global CSS File
+
 import './App.css';
 
 class App extends Component {

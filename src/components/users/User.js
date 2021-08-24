@@ -8,7 +8,9 @@ import Spinner from '../layout/Spinner';
 import Repos from '../repos/Repos'; 
 
 const User = ({ loading, match, user, repos, getUser, getUserRepos }) => {
-
+    
+    // Replaces component did mount
+    
     useEffect(() => {
         getUser(match.params.login);
         getUserRepos(match.params.login);

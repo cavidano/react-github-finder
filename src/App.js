@@ -118,7 +118,6 @@ const App = () => {
       </div>
     </Router>
   );
-  
 
 }
 

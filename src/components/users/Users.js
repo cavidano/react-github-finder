@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Spinner from '../layout/Spinner';
-import PropTypes from 'prop-types';
 
 // Context
 
@@ -34,11 +33,6 @@ const userStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gap: '1rem'
-}
-
-Users.propTypes = {
-    users: PropTypes.array.isRequired,
-    loading: PropTypes.bool.isRequired
 }
 
 export default Users;

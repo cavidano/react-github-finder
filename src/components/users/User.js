@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -7,8 +7,16 @@ import { Link } from 'react-router-dom';
 import Spinner from '../layout/Spinner';
 import Repos from '../repos/Repos'; 
 
-const User = ({ loading, match, user, repos, getUser, getUserRepos }) => {
+// Context
+
+import GithubContext from '../../context/github/githubContext';
+
+const User = ({ match, repos, getUserRepos }) => {
     
+    const githubContext = useContext(GithubContext);
+
+    const { loading, getUser, user } = githubContext;
+
     // Replaces component did mount
     
     useEffect(() => {
@@ -121,10 +129,7 @@ const User = ({ loading, match, user, repos, getUser, getUserRepos }) => {
 }
 
 User.propTypes = {
-    loading: PropTypes.bool.isRequired,
-    user: PropTypes.object.isRequired,
     repos: PropTypes.array.isRequired,
-    getUser: PropTypes.func.isRequired,
     getUserRepos: PropTypes.func.isRequired
 }
 
